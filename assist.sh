@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Define the base directory for packages and source the library script
-BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
-source "$BASEDIR/lib/bootstrap.sh"
+source <(curl -s https://raw.githubusercontent.com/rajasoun/dev-tools-bootstrap/main/lib/bootstrap.sh)
 
 APPDIR=$(basename "$BASEDIR")
 echo "$APPDIR Env Setup/Teardown"

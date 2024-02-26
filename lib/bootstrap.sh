@@ -110,6 +110,10 @@ function uninstall_apps() {
 
 # Execute the main function
 function bootstrap_main() {
+    # Define the base directory for packages and source the library script
+    BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+
+    # Get the app directory name
     APPDIR=$(basename "$BASEDIR")
     echo "$APPDIR Env Setup/Teardown"
 
